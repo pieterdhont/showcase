@@ -1,0 +1,405 @@
+@use "../util" as u;
+@use "../globals" as g;
+
+#anchorAbout,
+#anchorProjects,
+#anchorSocials {
+  position: absolute;
+  height: u.rem(
+    105
+  ); // Height of the navbar (change to your navbar's actual height)
+  margin-top: -#{u.rem(105)}; // Negative margin-top, same as the height
+  visibility: hidden;
+  width: 0; // The element won't take up any width
+  left: 0;
+}
+
+.navbar {
+  background-color: rgba(g.$darkblue, 0.7);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: g.$totalgrid-size-m;
+  margin-inline: auto;
+  margin-top: u.rem(3);
+  padding: u.rem(10) u.rem(10);
+  backdrop-filter: blur(u.rem(3));
+  position: sticky;
+  // position: -webkit-sticky;
+  top: u.rem(15);
+  z-index: 4;
+
+  &__menu {
+    display: flex;
+    text-align: center;
+    margin: 0;
+
+    &__item {
+      margin: u.rem(7) 0;
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: u.rem(10);
+      }
+
+      & a {
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        span {
+          display: none;
+          flex-grow: 1;
+          margin-right: u.rem(3);
+
+          @include u.breakpoint(medium) {
+            display: inline;
+          }
+        }
+
+        lord-icon {
+          width: u.rem(35);
+          height: u.rem(35);
+        }
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: u.rem(5);
+  align-items: flex-start;
+  width: g.$totalgrid-size-m;
+  margin-inline: auto;
+  margin: u.rem(15) auto;
+
+  @include u.breakpoint(large) {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "sidebar main"
+      "footer footer";
+  }
+
+  &__main,
+  &__sidebar,
+  &__footer {
+    padding: u.rem(20);
+    background-color: g.$darkblue;
+  }
+
+  &__main {
+    @include u.breakpoint(large) {
+      grid-area: main;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+
+    & h2 {
+      text-align: left;
+
+      @include u.breakpoint(large) {
+        margin-bottom: u.rem(46);
+      }
+    }
+
+    #sliding-doors-container {
+      position: relative;
+      width: 100%;
+      min-height: u.rem(300);
+      overflow: hidden;
+
+      &.hovered {
+        #toggle-button {
+          transform: translate(-50%, -50%) scale(1.5);
+        }
+      }
+
+      .door {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        padding: u.rem(20);
+        z-index: 2;
+        transition: transform 1s ease;
+        background-color: g.$medium-black;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: g.$grad-striped;
+          background-size: 1em 1em;
+          z-index: -1;
+          opacity: 0.3;
+          margin: u.rem(20);
+        }
+
+        &.left-door {
+          border-top-left-radius: u.rem(7);
+          border-bottom-left-radius: u.rem(7);
+          left: 0;
+          transform: translateY(0);
+
+          &::before {
+            border-top-left-radius: u.rem(7);
+            border-bottom-left-radius: u.rem(7);
+          }
+        }
+
+        &.right-door {
+          border-top-right-radius: u.rem(7);
+          border-bottom-right-radius: u.rem(7);
+          right: 0;
+          transform: translateY(0);
+
+          &::before {
+            border-top-right-radius: u.rem(7);
+            border-bottom-right-radius: u.rem(7);
+          }
+        }
+      }
+
+      #content {
+        width: 100%;
+        top: 0;
+        padding-top: u.rem(20);
+        padding-bottom: u.rem(20);
+        box-sizing: border-box;
+        z-index: 1;
+        display: block;
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      &.doors-open #left-door {
+        transform: translateX(-101%);
+      }
+
+      &.doors-open #right-door {
+        transform: translateX(101%);
+      }
+    }
+
+    #sliding-doors-container.hovered .door {
+      border: u.rem(1) solid g.$lightblue;
+    }
+
+    #toggle-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: u.rem(45);
+      height: u.rem(45);
+      border-radius: 50%;
+      background: g.$orange;
+
+      transition: transform 0.3s ease, top 1s ease;
+      transform: translate(-50%, -50%) scale(1);
+      /* Added scale(1) here */
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.5);
+      }
+    }
+
+    .doors-open #toggle-button {
+      top: calc(100% - u.rem(35));
+    }
+
+    .icon {
+      color: var(--background-color);
+      font-size: u.rem(28);
+    }
+  }
+
+  &__sidebar {
+    @include u.breakpoint(large) {
+      grid-area: sidebar;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: auto;
+      gap: u.rem(10);
+    }
+
+    &__header {
+      grid-column: 1 / -1;
+      text-align: left;
+    }
+  }
+
+  &__widget {
+    width: 100%;
+
+    margin: u.rem(8) 0;
+    padding: u.rem(5);
+    border-radius: u.rem(7);
+    border: u.rem(2) solid g.$lightblue;
+
+    & img {
+      aspect-ratio: 1;
+      width: 100%;
+      // max-height: u.rem(350);
+      object-fit: cover;
+      padding: u.rem(5);
+      margin-bottom: auto;
+    }
+
+    .widget-text {
+      padding: u.rem(5);
+    }
+
+    .code-link-container {
+      & .code-link {
+        border: u.rem(2) g.$lightblue;
+        border-block-start-style: inset;
+        border-block-end-style: outset;
+        border-radius: u.rem(7);
+        padding: u.rem(5);
+        color: g.$orange;
+        font-weight: 700;
+        font-size: u.rem(16);
+        transition: color 0.3s;
+
+        &:hover,
+        &:focus {
+          color: g.$lightblue;
+          border-color: g.$orange;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        animation: icon-bounce 0.5s infinite alternate;
+      }
+    }
+
+    --c: #{g.$orange};
+    /* the border color */
+    --b: #{u.rem(5)};
+    /* the border thickness*/
+    --g: #{u.rem(16)};
+    /* the gap on hover */
+
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%, var(--c) 0;
+    background: conic-gradient(
+          from 180deg at top var(--b) right var(--b),
+          var(--_g)
+        )
+        var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
+      conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0
+        var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
+    transition: 0.3s, background-position 0.3s 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      --_i: 100%;
+      transition: 0.3s, background-size 0.3s 0.3s;
+    }
+
+    @include u.breakpoint-between(small, medium) {
+      padding: u.rem(10);
+      display: grid;
+      gap: 1rem;
+      grid-template-areas:
+        "one two"
+        "one three"
+        "one four";
+
+      grid-template-rows: auto 1fr auto;
+
+      grid-template-columns: minmax(150px, 300px) 1fr;
+
+      & img {
+        grid-area: one;
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        object-fit: cover;
+      }
+
+      .code-link-container {
+        grid-area: four;
+        margin-bottom: u.rem(3);
+      }
+
+      // .widget-text {
+      //   margin-top: u.rem(5);
+      // }
+    }
+
+    @include u.breakpoint(large) {
+      // display: flex; // Use flexbox to layout children
+      // flex-direction: column; // Stack children vertically
+      // justify-content: space-between;
+      padding: u.rem(12);
+
+      & img {
+        aspect-ratio: 1;
+        width: 100%;
+        max-height: u.rem(250);
+        object-fit: cover;
+        margin-bottom: u.rem(5);
+      }
+
+      // .widget-text {
+      //   display: flex; // Use flexbox to layout children
+      // flex-direction: column; // Stack children vertically
+      // justify-content: space-around;
+      // }
+    }
+  }
+
+  &__footer {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    @include u.breakpoint-down(medium) {
+      grid-column: 1;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: u.rem(16);
+      padding: u.rem(10);
+      margin-top: u.rem(20);
+
+      border-radius: u.rem(8);
+
+      svg {
+        font-size: u.rem(24);
+        fill: g.$lightblue;
+        transition: transform 0.3s ease, fill 0.3s ease;
+
+        &:hover,
+        &:focus {
+          transform: translateY(u.rem(-3));
+          fill: g.$orange;
+          animation: icon-bounce 0.5s infinite alternate;
+        }
+      }
+    }
+  }
+}

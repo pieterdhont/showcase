@@ -1,0 +1,7 @@
+@use '../util' as u;
+
+$totalgrid-size-xs: min(100% - u.rem(50), u.rem(900));
+$totalgrid-size-s: min(100% - u.rem(50), u.rem(1100));
+$totalgrid-size-m: min(100% - u.rem(50), u.rem(1500));
+$totalgrid-size-l: min(100% - u.rem(50), u.rem(1900));
+$totalgrid-size-xl: min(100% - u.rem(50), u.rem(2200)); 

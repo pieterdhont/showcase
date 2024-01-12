@@ -1,0 +1,21 @@
+@use "../util" as u;
+@use "colors" as *;
+
+$grad-dotted: radial-gradient(
+    circle,
+    rgba($lightblue, 0.06) 20%,
+    transparent 10%
+  ),
+  radial-gradient(circle, rgba($lightblue, 0.06) 20%, transparent 10%);
+
+$grad-striped: linear-gradient(
+  45deg,
+  rgba($lightgray, 0.2) 7.5%,
+  transparent 7.5%,
+  transparent 42.5%,
+  rgba($lightgray, 0.2) 42.5%,
+  rgba($lightgray, 0.2) 57.5%,
+  transparent 57.5%,
+  transparent 92.5%,
+  rgba($lightgray, 0.2) 92.5%
+);
