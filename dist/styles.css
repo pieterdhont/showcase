@@ -259,11 +259,6 @@ li {
 .grid__main #toggle-button:hover {
   transform: translate(-50%, -50%) scale(1.5);
 }
-@media (max-width: 68.74875em) {
-  .grid__main #toggle-button:active {
-    transform: scale(1.5);
-  }
-}
 .grid__main .doors-open #toggle-button {
   top: calc(100% - 2.1875rem);
 }

@@ -221,11 +221,7 @@
       }
 
 
-      @include u.breakpoint-down(medium) {
-        &:active {
-          transform: scale(1.5);
-        }
-       }
+      
     }
     
 
