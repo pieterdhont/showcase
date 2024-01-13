@@ -219,7 +219,16 @@
       &:hover {
         transform: translate(-50%, -50%) scale(1.5);
       }
+
+
+      @include u.breakpoint-down(medium) {
+        &:active {
+          transform: scale(1.5);
+        }
+       }
     }
+    
+
 
     .doors-open #toggle-button {
       top: calc(100% - u.rem(35));
@@ -374,9 +383,7 @@
 
     text-align: center;
 
-    @include u.breakpoint-down(medium) {
-      grid-column: 1;
-    }
+    
 
     .socials {
       display: flex;
