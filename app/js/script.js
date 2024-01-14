@@ -52,14 +52,19 @@ document.addEventListener("DOMContentLoaded", () => {
     if (doorsAreOpening) {
       content.style.display = "block"; // Show content when doors are opening
       showAnnotations(); // Show annotations
-    } else {
-      content.style.display = "none"; // Hide content only when doors are fully closed
     }
   };
 
   // Event listeners
   toggleButton.addEventListener("click", toggleDoors);
-  doorsContainer.querySelectorAll(".door").forEach((door) => door.addEventListener("click", toggleDoors));
+  doorsContainer.querySelectorAll(".door").forEach((door) => {
+    door.addEventListener("click", toggleDoors);
+    door.addEventListener("transitionend", () => {
+      if (!doorsContainer.classList.contains("doors-open")) {
+        content.style.display = "none"; // Hide content only when doors are fully closed
+      }
+    });
+  });
 
   doorsContainer.addEventListener("mouseover", () => {
     if (!doorsContainer.classList.contains("doors-open")) {
