@@ -115,7 +115,7 @@
     #sliding-doors-container {
       position: relative;
       width: 100%;
-      min-height: u.rem(300);
+      min-height: u.rem(465);
       overflow: hidden;
 
       &.hovered {
@@ -175,13 +175,13 @@
       }
 
       #content {
+        display: none; /* Hide content when doors are closed */
         width: 100%;
         top: 0;
         padding-top: u.rem(20);
         padding-bottom: u.rem(20);
         box-sizing: border-box;
         z-index: 1;
-        display: block;
         opacity: 1;
         pointer-events: all;
 
@@ -196,6 +196,9 @@
 
       &.doors-open #right-door {
         transform: translateX(101%);
+      }
+      &.doors-open .content-hidden {
+        display: block; /* Show content when doors are open */
       }
     }
 

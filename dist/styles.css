@@ -169,7 +169,7 @@ li {
 .grid__main #sliding-doors-container {
   position: relative;
   width: 100%;
-  min-height: 18.75rem;
+  min-height: 29.0625rem;
   overflow: hidden;
 }
 .grid__main #sliding-doors-container.hovered #toggle-button {
@@ -220,13 +220,13 @@ li {
   border-bottom-right-radius: 0.4375rem;
 }
 .grid__main #sliding-doors-container #content {
+  display: none; /* Hide content when doors are closed */
   width: 100%;
   top: 0;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   box-sizing: border-box;
   z-index: 1;
-  display: block;
   opacity: 1;
   pointer-events: all;
 }
@@ -238,6 +238,9 @@ li {
 }
 .grid__main #sliding-doors-container.doors-open #right-door {
   transform: translateX(101%);
+}
+.grid__main #sliding-doors-container.doors-open .content-hidden {
+  display: block; /* Show content when doors are open */
 }
 .grid__main #sliding-doors-container.hovered .door {
   border: 0.0625rem solid rgb(98, 198, 188);

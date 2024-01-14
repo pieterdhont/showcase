@@ -28,10 +28,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const toggleButton = document.getElementById('toggle-button');
   const doorsContainer = document.getElementById('sliding-doors-container');
   const doors = doorsContainer.querySelectorAll('.door');
+  const content = doorsContainer.querySelector('#content'); // Select the content
+  const developerSpan = document.querySelector('.developer');
 
-  // Function to toggle doors open and closed
+  let doorsAreOpening = false; // To track the state of door animation
+
+  const showRoughAnnotation = () => {
+    const annotation = RoughNotation.annotate(developerSpan, { type: 'highlight', color: 'red' });
+    annotation.show();
+  };
+
   function toggleDoors() {
     doorsContainer.classList.toggle('doors-open');
+    doorsAreOpening = doorsContainer.classList.contains('doors-open');
+
+    if (doorsAreOpening) {
+      content.style.display = 'block'; // Show content immediately when doors are opening
+    }
   }
 
   // Click event listener for the toggle button and doors
@@ -50,10 +63,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     doorsContainer.classList.remove('hovered');
   });
 
-  // Listen for the end of the transform transition on the doors
-  doorsContainer.addEventListener('transitionend', (event) => {
-    if (event.propertyName === 'transform' && doorsContainer.classList.contains('doors-open')) {
-      // When doors are open, ensure the hovered class is not present
+   doorsContainer.addEventListener('transitionend', (event) => {
+    if (event.propertyName === 'transform') {
+      if (doorsAreOpening) {
+        // Show the annotation when doors are fully opened
+        showRoughAnnotation();
+      } else {
+        content.style.display = 'none'; // Hide content only when doors are fully closed
+      }
       doorsContainer.classList.remove('hovered');
     }
   });
