@@ -169,7 +169,7 @@ li {
 .grid__main #sliding-doors-container {
   position: relative;
   width: 100%;
-  min-height: 29.0625rem;
+  min-height: 28.75rem;
   overflow: hidden;
 }
 .grid__main #sliding-doors-container.hovered #toggle-button {
@@ -241,6 +241,11 @@ li {
 }
 .grid__main #sliding-doors-container.doors-open .content-hidden {
   display: block; /* Show content when doors are open */
+}
+@media (min-width: 43.74875em) and (max-width: 68.74875em) {
+  .grid__main #sliding-doors-container {
+    min-height: 20.625rem;
+  }
 }
 .grid__main #sliding-doors-container.hovered .door {
   border: 0.0625rem solid rgb(98, 198, 188);
