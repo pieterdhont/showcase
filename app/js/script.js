@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   let doorsAreOpening = false; // To track the state of door animation
 
   const showRoughAnnotation = () => {
-    const annotation = RoughNotation.annotate(developerSpan, { type: 'highlight', color: 'red' });
+    const annotation = RoughNotation.annotate(developerSpan, { type: 'highlight', color: '#ff7847' });
     annotation.show();
   };
 
