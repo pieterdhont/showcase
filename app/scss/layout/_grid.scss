@@ -252,6 +252,7 @@
 
   &__widget {
     width: 100%;
+    margin: u.rem(5) auto;
     padding: u.rem(5);
     border-radius: u.rem(7);
     border: u.rem(2) solid g.$lightblue;
@@ -353,6 +354,7 @@
       // display: flex; // Use flexbox to layout children
       // flex-direction: column; // Stack children vertically
       // justify-content: space-between;
+      margin: 0;
       padding: u.rem(12);
 
       & img {
