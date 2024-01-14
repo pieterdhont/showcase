@@ -5,9 +5,7 @@
 #anchorProjects,
 #anchorSocials {
   position: absolute;
-  height: u.rem(
-    105
-  ); // Height of the navbar (change to your navbar's actual height)
+  height: u.rem(105); // Height of the navbar (change to your navbar's actual height)
   margin-top: -#{u.rem(105)}; // Negative margin-top, same as the height
   visibility: hidden;
   width: 0; // The element won't take up any width
@@ -175,7 +173,8 @@
       }
 
       #content {
-        display: none; /* Hide content when doors are closed */
+        display: none;
+        /* Hide content when doors are closed */
         width: 100%;
         top: 0;
         padding-top: u.rem(20);
@@ -197,8 +196,10 @@
       &.doors-open #right-door {
         transform: translateX(101%);
       }
+
       &.doors-open .content-hidden {
-        display: block; /* Show content when doors are open */
+        display: block;
+        /* Show content when doors are open */
       }
 
       @include u.breakpoint-between(small, medium) {
@@ -310,15 +311,13 @@
     /* the gap on hover */
 
     padding: calc(var(--g) + var(--b));
-    --_g: #0000 25%, var(--c) 0;
-    background: conic-gradient(
-          from 180deg at top var(--b) right var(--b),
-          var(--_g)
-        )
-        var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
-      conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0
-        var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
-    transition: 0.3s, background-position 0.3s 0.3s;
+    --_g: #0000 25%,
+    var(--c) 0;
+    background: conic-gradient(from 180deg at top var(--b) right var(--b),
+      var(--_g)) var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
+    conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
+    transition: 0.3s,
+    background-position 0.3s 0.3s;
     cursor: pointer;
 
     &:hover {
@@ -391,8 +390,6 @@
       align-items: center;
       gap: u.rem(16);
       padding: u.rem(10);
-      margin-top: u.rem(20);
-
       border-radius: u.rem(8);
 
       svg {
