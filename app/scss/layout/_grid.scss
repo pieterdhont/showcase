@@ -223,12 +223,7 @@
       &:hover {
         transform: translate(-50%, -50%) scale(1.5);
       }
-
-
-      
     }
-    
-
 
     .doors-open #toggle-button {
       top: calc(100% - u.rem(35));
@@ -257,8 +252,6 @@
 
   &__widget {
     width: 100%;
-
-    margin: u.rem(8) 0;
     padding: u.rem(5);
     border-radius: u.rem(7);
     border: u.rem(2) solid g.$lightblue;
@@ -382,8 +375,6 @@
     grid-column: 1 / -1;
 
     text-align: center;
-
-    
 
     .socials {
       display: flex;

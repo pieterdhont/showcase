@@ -283,7 +283,6 @@ li {
 }
 .grid__widget {
   width: 100%;
-  margin: 0.5rem 0;
   padding: 0.3125rem;
   border-radius: 0.4375rem;
   border: 0.125rem solid rgb(98, 198, 188);
