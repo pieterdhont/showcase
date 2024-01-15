@@ -3,7 +3,7 @@
 
 #anchorAbout,
 #anchorProjects,
-#anchorSocials {
+#anchorSocials { 
   position: absolute;
   height: u.rem(105); // Height of the navbar (change to your navbar's actual height)
   margin-top: -#{u.rem(105)}; // Negative margin-top, same as the height
