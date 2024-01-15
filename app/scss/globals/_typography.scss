@@ -1,7 +1,8 @@
-@use '../util' as u;
+@use "../util" as u;
+@use "colors" as *;
 
-h1, 
-h2, 
+h1,
+h2,
 h3 {
   font-weight: 700;
   line-height: 1.1;
@@ -25,9 +26,8 @@ p {
   font-size: u.rem(16);
 }
 
-
-a, 
-a:visited, 
+a,
+a:visited,
 a:active {
   text-decoration: none;
 }
@@ -36,3 +36,14 @@ li {
   list-style: none;
 }
 
+span,
+p,
+a,
+h1,
+h2,
+h3 {
+  &::selection {
+    background-color: $lightblue;
+    color: var(--background-color);
+  }
+}

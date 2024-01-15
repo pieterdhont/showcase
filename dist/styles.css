@@ -60,6 +60,21 @@ li {
   list-style: none;
 }
 
+span::-moz-selection, p::-moz-selection, a::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection {
+  background-color: rgb(98, 198, 188);
+  color: var(--background-color);
+}
+
+span::selection,
+p::selection,
+a::selection,
+h1::selection,
+h2::selection,
+h3::selection {
+  background-color: rgb(98, 198, 188);
+  color: var(--background-color);
+}
+
 @keyframes icon-bounce {
   from {
     transform: translateY(0);
