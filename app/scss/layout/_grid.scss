@@ -113,7 +113,7 @@
     #sliding-doors-container {
       position: relative;
       width: 100%;
-      min-height: u.rem(460);
+      min-height: u.rem(450);
       overflow: hidden;
 
       &.hovered {
@@ -204,6 +204,10 @@
 
       @include u.breakpoint-between(small, medium) {
         min-height: u.rem(330);
+      }
+
+      @include u.breakpoint(large) {
+        min-height: u.rem(500);
       }
     }
 
