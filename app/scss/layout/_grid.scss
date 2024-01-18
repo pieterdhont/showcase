@@ -31,8 +31,10 @@
   top: u.rem(15);
   z-index: 4;
 
-  @media (max-width: u.rem(347)) {
-    margin-inline-start: u.rem(25);
+  @media (max-width: u.rem(360)) {
+    margin-inline-start: u.rem(24);
+    margin-inline-end: min(u.rem(24));
+    
   }
 
   &__menu {

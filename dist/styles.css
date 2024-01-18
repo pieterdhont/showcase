@@ -111,9 +111,10 @@ h3::selection {
   top: 0.9375rem;
   z-index: 4;
 }
-@media (max-width: 21.6875rem) {
+@media (max-width: 22.5rem) {
   .navbar {
-    margin-inline-start: 1.5625rem;
+    margin-inline-start: 1.5rem;
+    margin-inline-end: min(1.5rem);
   }
 }
 .navbar__menu {
