@@ -121,6 +121,7 @@ h3::selection {
   display: flex;
   text-align: center;
   margin: 0;
+  padding: 0;
 }
 .navbar__menu__item {
   margin: 0.4375rem 0;
