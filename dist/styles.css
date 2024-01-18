@@ -100,6 +100,7 @@ h3::selection {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  min-width: 18.875rem;
   width: min(100% - 3.125rem, 93.75rem);
   margin-inline: auto;
   margin-top: 0.1875rem;
@@ -109,6 +110,11 @@ h3::selection {
   position: sticky;
   top: 0.9375rem;
   z-index: 4;
+}
+@media (max-width: 21.6875rem) {
+  .navbar {
+    margin-inline-start: 1.5625rem;
+  }
 }
 .navbar__menu {
   display: flex;
@@ -324,8 +330,7 @@ h3::selection {
   --g: 1rem;
   /* the gap on hover */
   padding: calc(var(--g) + var(--b));
-  --_g: #0000 25%,
-  var(--c) 0;
+  --_g: #0000 25%, var(--c) 0;
   background: conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) var(--_i, 200%) 0/200% var(--_i, var(--b)) no-repeat, conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%)/var(--_i, var(--b)) 200% no-repeat;
   transition: 0.3s, background-position 0.3s 0.3s;
   cursor: pointer;
