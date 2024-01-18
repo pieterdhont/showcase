@@ -1,271 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Portfolio Pieter Dhont" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      rel="stylesheet"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="dist/styles.css" />
-    <script src="app/js/script.js" defer></script>
-    <script src="https://cdn.lordicon.com/lordicon.js" defer></script>
-    <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Portfolio Pieter Dhont" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
 
-  <body>
-    <nav class="navbar">
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item">
-          <a href="#anchorAbout"
-            ><span>About</span
-            ><lord-icon
-              id="aboutMeIcon"
-              title="About"
-              src="https://cdn.lordicon.com/kthelypq.json"
-              trigger="click"
-              colors="primary:#ffffff"
-              alt="About"
-              aria-label="About"
-            >
-            </lord-icon>
-          </a>
-        </li>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/styles.css" />
+  <script src="app/js/script.js" defer></script>
+  <script src="https://cdn.lordicon.com/lordicon.js" defer></script>
+  <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js" defer></script>
+</head>
 
-        <li class="navbar__menu__item">
-          <a href="#anchorProjects"
-            ><span>Projects</span>
-            <lord-icon
-              id="projectsIcon"
-              title="Projects"
-              src="https://cdn.lordicon.com/pflszboa.json"
-              trigger="click"
-              colors="primary:#ffffff"
-              alt="Projects"
-              aria-label="Projects"
-            >
-            </lord-icon
-          ></a>
-        </li>
-        <li class="navbar__menu__item">
-          <a href="#anchorSocials"
-            ><span>Socials</span>
-            <lord-icon
-              id="socialsIcon"
-              title="Socials"
-              src="https://cdn.lordicon.com/wzrwaorf.json"
-              trigger="click"
-              stroke="bold"
-              colors="primary:#ffffff,secondary:#ffffff"
-              alt="Socials"
-              aria-label="Socials"
-            >
-            </lord-icon
-          ></a>
-        </li>
-      </ul>
-    </nav>
-    <div class="grid">
-      <main class="grid__main section">
-        <div id="anchorAbout"></div>
+<body>
+  <nav class="navbar">
+    <ul class="navbar__menu">
+      <li class="navbar__menu__item">
+        <a href="#anchorAbout"><span>About</span><lord-icon id="aboutMeIcon" title="About"
+            src="https://cdn.lordicon.com/kthelypq.json" trigger="click" colors="primary:#ffffff" alt="About"
+            aria-label="About">
+          </lord-icon>
+        </a>
+      </li>
 
-        <h2>About me</h2>
+      <li class="navbar__menu__item">
+        <a href="#anchorProjects"><span>Projects</span>
+          <lord-icon id="projectsIcon" title="Projects" src="https://cdn.lordicon.com/pflszboa.json" trigger="click"
+            colors="primary:#ffffff" alt="Projects" aria-label="Projects">
+          </lord-icon></a>
+      </li>
+      <li class="navbar__menu__item">
+        <a href="#anchorSocials"><span>Socials</span>
+          <lord-icon id="socialsIcon" title="Socials" src="https://cdn.lordicon.com/wzrwaorf.json" trigger="click"
+            stroke="bold" colors="primary:#ffffff,secondary:#ffffff" alt="Socials" aria-label="Socials">
+          </lord-icon></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="grid">
+    <main class="grid__main section">
+      <div id="anchorAbout"></div>
 
-        <div id="sliding-doors-container">
-          <div id="left-door" class="door left-door"></div>
-          <div id="right-door" class="door right-door"></div>
-          <div id="content" class="content-hidden">
-            <!-- Your content goes here -->
+      <h2>About me</h2>
 
-            <div class="intro">
-              <h3>Hello! I'm <span class="developer">Pieter</span>, an aspiring full stack developer based in Ghent.</h3>
-              <p>I've spent a year at VDAB learning the fundamentals of <span class="front-end">frontend</span> and <span class="back-end">backend </span>development </p>
-              <p>Through this experience, I had the opportunity to get guidance from seasoned coaches and to work with fellow students from different parts of the country in a online <span class="scrum">scrum</span> project.</p>
-              <p>I'm currently looking for an <span class="entry">entry-level</span> role as a developer.</p>
-            </div>
-            
-            <br />
-            <br />
+      <div id="sliding-doors-container">
+        <div id="left-door" class="door left-door"></div>
+        <div id="right-door" class="door right-door"></div>
+        <div id="content" class="content-hidden">
+          <!-- Your content goes here -->
+
+          <div class="intro">
+            <h3>
+              Hello! I'm <span class="developer">Pieter</span>, an aspiring
+              full stack developer based in Ghent.
+            </h3>
+            <p>
+              I've spent a year at VDAB learning the fundamentals of
+              <span class="front-end">frontend</span> and
+              <span class="back-end">backend </span>development
+            </p>
+            <p>
+              Through this experience, I had the opportunity to get guidance
+              from seasoned coaches and to work with fellow students from
+              different parts of the country in a online
+              <span class="scrum">scrum</span> project.
+            </p>
+            <p>
+              I'm currently looking for an
+              <span class="entry">entry-level</span> role as a developer.
+            </p>
           </div>
-          <div id="toggle-button" title="Open/Close">
-            <i class="fa-solid fa-unlock icon"></i>
-          </div>
+
+          <br />
+          <br />
         </div>
-      </main>
+        <div id="toggle-button" title="Open/Close">
+          <i class="fa-solid fa-unlock icon"></i>
+        </div>
+      </div>
+    </main>
 
-      <aside class="grid__sidebar section">
-        <div id="anchorProjects"></div>
-        <h2 class="grid__sidebar__header">Projects</h2>
+    <aside class="grid__sidebar section">
+      <div id="anchorProjects"></div>
+      <h2 class="grid__sidebar__header">Projects</h2>
 
-        <article class="grid__widget">
+      <article class="grid__widget">
+        <div class="widget-sub">
           <img
             src="https://images.unsplash.com/photo-1532460734809-e7f8475ca917?q=80&w=2037&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="pizzeria"
-          />
+            alt="pizzeria" />
           <div class="widget-text">
             <h3>Pizzeria</h3>
             <p>
-              A PHP application developped in MVC structure and twig templating. You can order pizza's, add them to your cart, checkout and view your order history. You can also login and register as a user.
+              A PHP application developped in MVC structure and twig
+              templating. You can order pizza's, add them to your cart,
+              checkout and view your order history. You can also login and
+              register as a user.
             </p>
           </div>
           <div class="code-link-container">
             <a href="#" class="code-link">View Code</a>
           </div>
-        </article>
-        <article class="grid__widget">
+        </div>
+      </article>
+      <article class="grid__widget">
+        <div class="widget-sub">
           <img
             src="https://images.unsplash.com/photo-1581905764498-f1b60bae941a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="videostore"
-          />
+            alt="videostore" />
           <div class="widget-text">
             <h3>Video Store</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-              iure nulla error quidem perferendis Lorem ipsum dolor, sit amet
-              Sit, laborum? Lorem ipsum dolor sit Aliquid, eos! Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Harum hic eaectus
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Dolorum iure nulla error quidem perferendis Lorem ipsum dolor,
+              sit amet Sit, laborum? Lorem ipsum dolor sit Aliquid, eos! Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Harum hic
+              eaectus
             </p>
           </div>
           <div class="code-link-container">
             <a href="#" class="code-link">View Code</a>
           </div>
-        </article>
-        <article class="grid__widget">
+        </div>
+      </article>
+      <article class="grid__widget">
+        <div class="widget-sub">
           <img
             src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=300&h=300&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          />
+            alt="" />
           <div class="widget-text">
             <h3>Prularia</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
               perferendis quia labore facilis aliquam adipisci cumque tenetur
               nesciunt? Lorem ipsum dolor sit amet consectetur, adipisicing
+              lorem50
             </p>
           </div>
           <div class="code-link-container">
             <a href="#" class="code-link">View Code</a>
           </div>
-        </article>
-        <article class="grid__widget">
+        </div>
+      </article>
+      <article class="grid__widget">
+        <div class="widget-sub">
           <img
             src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=300&h=300&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          />
+            alt="" />
           <div class="widget-text">
             <h3>More Info</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-              iure nulla error quidem perferendis, rerum quas minima et voluptas
-              accusamus sint unde cum nam id cupiditate harum laboriosam at
-              alias?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Eos, debitis.
-            </p>
+            <p>Lorem ipsum dolor sit,</p>
           </div>
           <div class="code-link-container">
             <a href="#" class="code-link">View Code</a>
           </div>
-        </article>
-      </aside>
-
-      <footer class="grid__footer section">
-        <div id="anchorSocials"></div>
-        <div class="socials">
-          <!-- Mail Icon SVG -->
-          <a href="mailto:dhontpieter@hotmail.com" title="Send me a message">
-            <svg
-              class="mail-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="50"
-              width="57"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-              />
-            </svg>
-          </a>
-          <!-- LinkedIn Icon SVG -->
-          <a
-            href="https://www.linkedin.com/in/pieter-dhont-17a229256/"
-            title="Connect via LinkedIn"
-          >
-            <svg
-              class="linkedin-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="49"
-              width="42"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-              />
-            </svg>
-          </a>
-          <!-- GitHub Icon SVG -->
-          <a href="https://github.com/pieterdhont" title="Check out my Github">
-            <svg
-              class="github-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="48"
-              width="44"
-              viewBox="0 0 512 512"
-            >
-              <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-              <path
-                d="M448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM265.8 407.7c0-1.8 0-6 .1-11.6c.1-11.4 .1-28.8 .1-43.7c0-15.6-5.2-25.5-11.3-30.7c37-4.1 76-9.2 76-73.1c0-18.2-6.5-27.3-17.1-39c1.7-4.3 7.4-22-1.7-45c-13.9-4.3-45.7 17.9-45.7 17.9c-13.2-3.7-27.5-5.6-41.6-5.6s-28.4 1.9-41.6 5.6c0 0-31.8-22.2-45.7-17.9c-9.1 22.9-3.5 40.6-1.7 45c-10.6 11.7-15.6 20.8-15.6 39c0 63.6 37.3 69 74.3 73.1c-4.8 4.3-9.1 11.7-10.6 22.3c-9.5 4.3-33.8 11.7-48.3-13.9c-9.1-15.8-25.5-17.1-25.5-17.1c-16.2-.2-1.1 10.2-1.1 10.2c10.8 5 18.4 24.2 18.4 24.2c9.7 29.7 56.1 19.7 56.1 19.7c0 9 .1 21.7 .1 30.6c0 4.8 .1 8.6 .1 10c0 4.3-3 9.5-11.5 8C106 393.6 59.8 330.8 59.8 257.4c0-91.8 70.2-161.5 162-161.5s166.2 69.7 166.2 161.5c.1 73.4-44.7 136.3-110.7 158.3c-8.4 1.5-11.5-3.7-11.5-8zm-90.5-54.8c-.2-1.5 1.1-2.8 3-3.2c1.9-.2 3.7 .6 3.9 1.9c.3 1.3-1 2.6-3 3c-1.9 .4-3.7-.4-3.9-1.7zm-9.1 3.2c-2.2 .2-3.7-.9-3.7-2.4c0-1.3 1.5-2.4 3.5-2.4c1.9-.2 3.7 .9 3.7 2.4c0 1.3-1.5 2.4-3.5 2.4zm-14.3-2.2c-1.9-.4-3.2-1.9-2.8-3.2s2.4-1.9 4.1-1.5c2 .6 3.3 2.1 2.8 3.4c-.4 1.3-2.4 1.9-4.1 1.3zm-12.5-7.3c-1.5-1.3-1.9-3.2-.9-4.1c.9-1.1 2.8-.9 4.3 .6c1.3 1.3 1.8 3.3 .9 4.1c-.9 1.1-2.8 .9-4.3-.6zm-8.5-10c-1.1-1.5-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3c1.1 1.5 1.1 3.3 0 4.1c-.9 .6-2.6 0-3.7-1.5zm-6.3-8.8c-1.1-1.3-1.3-2.8-.4-3.5c.9-.9 2.4-.4 3.5 .6c1.1 1.3 1.3 2.8 .4 3.5c-.9 .9-2.4 .4-3.5-.6zm-6-6.4c-1.3-.6-1.9-1.7-1.5-2.6c.4-.6 1.5-.9 2.8-.4c1.3 .7 1.9 1.8 1.5 2.6c-.4 .9-1.7 1.1-2.8 .4z"
-              />
-            </svg>
-          </a>
-          <a
-            href="app/assets/CVPIETERDHONT.pdf"
-            title="Download my CV"
-            download="CVPIETERDHONT.pdf"
-          >
-            <svg
-              class="resumeIcon"
-              fill="#ffffff"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="50"
-              height="60"
-              viewBox="0 0 256 197"
-              enable-background="new 0 0 256 197"
-              xml:space="preserve"
-              stroke="#ffffff"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke="#CCCCCC"
-                stroke-width="0.512"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M217.661,68.478h-16.249l-22.681,43.307L156.05,68.478h-39.612c-0.029-10.053-0.207-31.556-0.207-31.556H85.606v-3.067 c0-7.02-5.691-12.711-12.711-12.711c-7.02,0-12.711,5.691-12.711,12.711v3.067H29.689c0,0-0.25,69.551-0.042,105.26h-8.832 c-10.107,0-18.363,7.703-18.796,17.536c-0.223,5.064,1.579,9.866,5.075,13.52c3.498,3.656,8.21,5.668,13.268,5.668 c0,0,77.554,0,77.736,0c4.771,0,9.226-1.759,12.626-5.007c3.517-3.36,5.548-8.351,5.548-12.844c0,0,0.123-22.125,0.174-49.107 h19.768v82.752h85.033V115.45c0-2.183,1.403-3.665,3.665-3.665c2.183,0,3.665,1.403,3.665,3.665v79.251H254v-89.882 C254,84.777,237.624,68.478,217.661,68.478z M20.362,171.018c-2.885,0-5.573-1.149-7.568-3.234 c-1.994-2.084-3.022-4.825-2.894-7.718c0.243-5.51,5.14-9.994,10.915-9.994h62.158c-2.299,3.293-3.442,7.228-3.253,11.335 c0.163,3.547,1.364,6.851,3.302,9.612H20.362z M108.384,160.803c0,2.851-1.104,5.477-3.109,7.392 c-2.039,1.947-4.786,2.951-7.713,2.81c-5.341-0.246-9.717-4.621-9.962-9.961c-0.133-2.898,0.892-5.643,2.886-7.731 c1.642-1.72,3.758-2.791,6.065-3.122v-8.009H37.536c-0.201-34.393-0.204-63.12-0.006-97.371h70.891 C108.786,86.023,108.384,160.803,108.384,160.803z M202.101,17.04c-8.486-11.741-17.572-16.067-29.888-14.394 c-16.484,2.238-28.032,17.416-25.794,33.9s17.318,27.135,33.9,25.794c21.243-1.719,37.165-16.756,42.923-30.198 c0-0.001,0.001-0.002,0.002-0.003C214.099,30.977,207.461,24.456,202.101,17.04z"
-                ></path>
-              </g>
-            </svg>
-          </a>
         </div>
-        <p id="credit">
-          Created by <span id="name">Pieter Dhont</span> &copy;
-          <span id="year"></span>
-        </p>
-      </footer>
-    </div>
-  </body>
+      </article>
+    </aside>
+
+    <footer class="grid__footer section">
+      <div id="anchorSocials"></div>
+      <div class="socials">
+        <!-- Mail Icon SVG -->
+        <a href="mailto:dhontpieter@hotmail.com" title="Send me a message">
+          <svg class="mail-icon" xmlns="http://www.w3.org/2000/svg" height="50" width="57" viewBox="0 0 512 512">
+            <path
+              d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+          </svg>
+        </a>
+        <!-- LinkedIn Icon SVG -->
+        <a href="https://www.linkedin.com/in/pieter-dhont-17a229256/" title="Connect via LinkedIn">
+          <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" height="49" width="42" viewBox="0 0 512 512">
+            <path
+              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+          </svg>
+        </a>
+        <!-- GitHub Icon SVG -->
+        <a href="https://github.com/pieterdhont" title="Check out my Github">
+          <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" height="48" width="44" viewBox="0 0 512 512">
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM265.8 407.7c0-1.8 0-6 .1-11.6c.1-11.4 .1-28.8 .1-43.7c0-15.6-5.2-25.5-11.3-30.7c37-4.1 76-9.2 76-73.1c0-18.2-6.5-27.3-17.1-39c1.7-4.3 7.4-22-1.7-45c-13.9-4.3-45.7 17.9-45.7 17.9c-13.2-3.7-27.5-5.6-41.6-5.6s-28.4 1.9-41.6 5.6c0 0-31.8-22.2-45.7-17.9c-9.1 22.9-3.5 40.6-1.7 45c-10.6 11.7-15.6 20.8-15.6 39c0 63.6 37.3 69 74.3 73.1c-4.8 4.3-9.1 11.7-10.6 22.3c-9.5 4.3-33.8 11.7-48.3-13.9c-9.1-15.8-25.5-17.1-25.5-17.1c-16.2-.2-1.1 10.2-1.1 10.2c10.8 5 18.4 24.2 18.4 24.2c9.7 29.7 56.1 19.7 56.1 19.7c0 9 .1 21.7 .1 30.6c0 4.8 .1 8.6 .1 10c0 4.3-3 9.5-11.5 8C106 393.6 59.8 330.8 59.8 257.4c0-91.8 70.2-161.5 162-161.5s166.2 69.7 166.2 161.5c.1 73.4-44.7 136.3-110.7 158.3c-8.4 1.5-11.5-3.7-11.5-8zm-90.5-54.8c-.2-1.5 1.1-2.8 3-3.2c1.9-.2 3.7 .6 3.9 1.9c.3 1.3-1 2.6-3 3c-1.9 .4-3.7-.4-3.9-1.7zm-9.1 3.2c-2.2 .2-3.7-.9-3.7-2.4c0-1.3 1.5-2.4 3.5-2.4c1.9-.2 3.7 .9 3.7 2.4c0 1.3-1.5 2.4-3.5 2.4zm-14.3-2.2c-1.9-.4-3.2-1.9-2.8-3.2s2.4-1.9 4.1-1.5c2 .6 3.3 2.1 2.8 3.4c-.4 1.3-2.4 1.9-4.1 1.3zm-12.5-7.3c-1.5-1.3-1.9-3.2-.9-4.1c.9-1.1 2.8-.9 4.3 .6c1.3 1.3 1.8 3.3 .9 4.1c-.9 1.1-2.8 .9-4.3-.6zm-8.5-10c-1.1-1.5-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3c1.1 1.5 1.1 3.3 0 4.1c-.9 .6-2.6 0-3.7-1.5zm-6.3-8.8c-1.1-1.3-1.3-2.8-.4-3.5c.9-.9 2.4-.4 3.5 .6c1.1 1.3 1.3 2.8 .4 3.5c-.9 .9-2.4 .4-3.5-.6zm-6-6.4c-1.3-.6-1.9-1.7-1.5-2.6c.4-.6 1.5-.9 2.8-.4c1.3 .7 1.9 1.8 1.5 2.6c-.4 .9-1.7 1.1-2.8 .4z" />
+          </svg>
+        </a>
+        <a href="app/assets/CVPIETERDHONT.pdf" title="Download my CV" download="CVPIETERDHONT.pdf">
+          <svg class="resumeIcon" fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="60" viewBox="0 0 256 197"
+            enable-background="new 0 0 256 197" xml:space="preserve" stroke="#ffffff">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+              stroke-width="0.512"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M217.661,68.478h-16.249l-22.681,43.307L156.05,68.478h-39.612c-0.029-10.053-0.207-31.556-0.207-31.556H85.606v-3.067 c0-7.02-5.691-12.711-12.711-12.711c-7.02,0-12.711,5.691-12.711,12.711v3.067H29.689c0,0-0.25,69.551-0.042,105.26h-8.832 c-10.107,0-18.363,7.703-18.796,17.536c-0.223,5.064,1.579,9.866,5.075,13.52c3.498,3.656,8.21,5.668,13.268,5.668 c0,0,77.554,0,77.736,0c4.771,0,9.226-1.759,12.626-5.007c3.517-3.36,5.548-8.351,5.548-12.844c0,0,0.123-22.125,0.174-49.107 h19.768v82.752h85.033V115.45c0-2.183,1.403-3.665,3.665-3.665c2.183,0,3.665,1.403,3.665,3.665v79.251H254v-89.882 C254,84.777,237.624,68.478,217.661,68.478z M20.362,171.018c-2.885,0-5.573-1.149-7.568-3.234 c-1.994-2.084-3.022-4.825-2.894-7.718c0.243-5.51,5.14-9.994,10.915-9.994h62.158c-2.299,3.293-3.442,7.228-3.253,11.335 c0.163,3.547,1.364,6.851,3.302,9.612H20.362z M108.384,160.803c0,2.851-1.104,5.477-3.109,7.392 c-2.039,1.947-4.786,2.951-7.713,2.81c-5.341-0.246-9.717-4.621-9.962-9.961c-0.133-2.898,0.892-5.643,2.886-7.731 c1.642-1.72,3.758-2.791,6.065-3.122v-8.009H37.536c-0.201-34.393-0.204-63.12-0.006-97.371h70.891 C108.786,86.023,108.384,160.803,108.384,160.803z M202.101,17.04c-8.486-11.741-17.572-16.067-29.888-14.394 c-16.484,2.238-28.032,17.416-25.794,33.9s17.318,27.135,33.9,25.794c21.243-1.719,37.165-16.756,42.923-30.198 c0-0.001,0.001-0.002,0.002-0.003C214.099,30.977,207.461,24.456,202.101,17.04z">
+              </path>
+            </g>
+          </svg>
+        </a>
+      </div>
+      <p id="credit">
+        Created by <span id="name">Pieter Dhont</span> &copy;
+        <span id="year"></span>
+      </p>
+    </footer>
+  </div>
+</body>
+
 </html>
