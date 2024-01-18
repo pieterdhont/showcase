@@ -350,7 +350,7 @@
 
         grid-template-rows: auto 1fr auto;
 
-        grid-template-columns: minmax(150px, 300px) 1fr;
+        grid-template-columns: minmax(u.rem(150), u.rem(300)) 1fr;
 
         & img {
           grid-area: one;
@@ -372,7 +372,7 @@
 
       @include u.breakpoint(large) {
         display: grid;
-        grid-template-rows: u.rem(250) 0.5fr;
+        grid-template-rows: auto 1fr;
         flex: 1;
         margin: 0;
         padding: u.rem(12);

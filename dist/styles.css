@@ -377,7 +377,7 @@ h3::selection {
     gap: 1rem;
     grid-template-areas: "one two" "one three" "one four";
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: minmax(150px, 300px) 1fr;
+    grid-template-columns: minmax(9.375rem, 18.75rem) 1fr;
   }
   .grid__widget .widget-sub img {
     grid-area: one;
@@ -395,7 +395,7 @@ h3::selection {
 @media (min-width: 68.75em) {
   .grid__widget .widget-sub {
     display: grid;
-    grid-template-rows: 15.625rem 0.5fr;
+    grid-template-rows: auto 1fr;
     flex: 1;
     margin: 0;
     padding: 0.75rem;
