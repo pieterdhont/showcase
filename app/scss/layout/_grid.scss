@@ -273,7 +273,6 @@
   }
 
   &__widget {
-    width: 100%;
     margin: u.rem(5) auto;
     padding: u.rem(5);
     border-radius: u.rem(7);
@@ -284,12 +283,12 @@
       width: 100%;
       // max-height: u.rem(350);
       object-fit: cover;
-      padding: u.rem(5);
+      // padding: u.rem(5);
       margin-bottom: auto;
     }
 
     .widget-text {
-      padding: u.rem(5);
+      padding: u.rem(10) 0;
     }
 
     .code-link-container {

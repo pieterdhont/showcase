@@ -320,7 +320,6 @@ h3::selection {
   text-align: left;
 }
 .grid__widget {
-  width: 100%;
   margin: 0.3125rem auto;
   padding: 0.3125rem;
   border-radius: 0.4375rem;
@@ -342,11 +341,10 @@ h3::selection {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 0.3125rem;
   margin-bottom: auto;
 }
 .grid__widget .widget-text {
-  padding: 0.3125rem;
+  padding: 0.625rem 0;
 }
 .grid__widget .code-link-container .code-link {
   border: 0.125rem rgb(98, 198, 188);
