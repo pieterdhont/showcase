@@ -2,13 +2,19 @@ console.log("javascript is awesome!");
 
 // Event listener for each widget
 document.querySelectorAll(".grid__widget").forEach((widget) => {
-  widget.addEventListener("click", () => console.log("Widget clicked"));
+  widget.addEventListener("click", () => {
+    // Retrieve the URL from the data-url attribute of the clicked widget
+    const projectUrl = widget.getAttribute("data-url");
+    // Redirect the user to the URL
+    window.location.href = projectUrl;
+    console.log("Widget clicked");
+  });
 });
 
 // Event listener for 'View Code' links inside widgets
 document.querySelectorAll(".grid__widget .code-link").forEach((link) => {
   link.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevents the default action of the link
+    // event.preventDefault(); // Prevents the default action of the link
     event.stopPropagation(); // Prevents the widget click event from firing
     console.log("View Code link clicked");
   });
