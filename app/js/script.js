@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const content = doorsContainer.querySelector("#content");
 
   const typeWriter = document.getElementById('typewriter-text');
-const text = 'Pieter Dhont | Welcome to my showcase';
+const text = 'Pieter Dhont';
 
 typeWriter.innerHTML = text;
 typeWriter.style.setProperty('--characters', text.length);
