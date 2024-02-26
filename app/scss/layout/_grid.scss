@@ -15,7 +15,7 @@
 .navbar {
   background-color: rgba(g.$darkblue, 0.7);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   min-width: u.rem(302);
   width: g.$totalgrid-size-m;
@@ -32,6 +32,27 @@
     margin-inline-start: u.rem(24);
     margin-inline-end: min(u.rem(24));
 
+  }
+
+  .typewriter-effect {
+    display: flex;
+    justify-content: left;
+    font-family: monospace;
+    margin-right: auto;
+    font-size: u.rem(20);
+  
+    & > .text {
+      max-width: 0;
+      animation: typing 3s steps(var(--characters)) infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  
+    &::after {
+      content: " |";
+      animation: blink 1s infinite;
+      animation-timing-function: step-end;
+    }
   }
 
   &__menu {

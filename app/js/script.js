@@ -27,6 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const doorsContainer = document.getElementById("sliding-doors-container");
   const content = doorsContainer.querySelector("#content");
 
+  const typeWriter = document.getElementById('typewriter-text');
+const text = 'Pieter Dhont';
+
+typeWriter.innerHTML = text;
+typeWriter.style.setProperty('--characters', text.length);
+
   const annotationSettings = [
     { id: "developer", type: "box", color: "#62c6bc", delay: 0 },
     { id: "front-end", type: "highlight", color: "#ff7847", delay: 600 },

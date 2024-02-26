@@ -18,7 +18,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Jetbrains Mono", sans-serif;
   background-color: var(--background-color);
   background-image: radial-gradient(circle, rgba(98, 198, 188, 0.06) 20%, transparent 10%), radial-gradient(circle, rgba(98, 198, 188, 0.06) 20%, transparent 10%);
   background-size: 1em 1em;
@@ -83,6 +83,19 @@ h3::selection {
     transform: translateY(-0.3125rem);
   }
 }
+@keyframes typing {
+  75%, 100% {
+    max-width: calc(var(--characters) * 1ch);
+  }
+}
+@keyframes blink {
+  0%, 75%, 100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
 #anchorAbout,
 #anchorProjects,
 #anchorSocials {
@@ -97,7 +110,7 @@ h3::selection {
 .navbar {
   background-color: rgba(33, 31, 46, 0.7);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   min-width: 18.875rem;
   width: min(100% - 3.125rem, 93.75rem);
@@ -115,6 +128,24 @@ h3::selection {
     margin-inline-start: 1.5rem;
     margin-inline-end: min(1.5rem);
   }
+}
+.navbar .typewriter-effect {
+  display: flex;
+  justify-content: left;
+  font-family: monospace;
+  margin-right: auto;
+  font-size: 1.25rem;
+}
+.navbar .typewriter-effect > .text {
+  max-width: 0;
+  animation: typing 3s steps(var(--characters)) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.navbar .typewriter-effect::after {
+  content: " |";
+  animation: blink 1s infinite;
+  animation-timing-function: step-end;
 }
 .navbar__menu {
   display: flex;
