@@ -283,7 +283,7 @@
         aspect-ratio: 1;
         width: 100%;
         // max-height: u.rem(350);
-        object-fit: cover;
+        object-fit:contain;
         // padding: u.rem(5);
         margin-bottom: auto;
       }

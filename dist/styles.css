@@ -341,8 +341,8 @@ h3::selection {
 .grid__widget .widget-sub img {
   aspect-ratio: 1;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-bottom: auto;
 }
 .grid__widget .widget-sub .widget-text {
