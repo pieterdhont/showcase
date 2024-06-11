@@ -23,15 +23,11 @@ document.querySelectorAll(".grid__widget .code-link").forEach((link) => {
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  const toggleButton = document.getElementById("toggle-button");
-  const doorsContainer = document.getElementById("sliding-doors-container");
-  const content = doorsContainer.querySelector("#content");
-
   const typeWriter = document.getElementById('typewriter-text');
-const text = 'Pieter Dhont';
+  const text = 'Pieter Dhont';
 
-typeWriter.innerHTML = text;
-typeWriter.style.setProperty('--characters', text.length);
+  typeWriter.innerHTML = text;
+  typeWriter.style.setProperty('--characters', text.length);
 
   const annotationSettings = [
     { id: "developer", type: "box", color: "#62c6bc", delay: 0 },
@@ -57,34 +53,6 @@ typeWriter.style.setProperty('--characters', text.length);
     });
   };
 
-  const toggleDoors = () => {
-    doorsContainer.classList.toggle("doors-open");
-    const doorsAreOpening = doorsContainer.classList.contains("doors-open");
-
-    if (doorsAreOpening) {
-      content.style.display = "block"; // Show content when doors are opening
-      showAnnotations(); // Show annotations
-    }
-  };
-
-  // Event listeners
-  toggleButton.addEventListener("click", toggleDoors);
-  doorsContainer.querySelectorAll(".door").forEach((door) => {
-    door.addEventListener("click", toggleDoors);
-    door.addEventListener("transitionend", () => {
-      if (!doorsContainer.classList.contains("doors-open")) {
-        content.style.display = "none"; // Hide content only when doors are fully closed
-      }
-    });
-  });
-
-  doorsContainer.addEventListener("mouseover", () => {
-    if (!doorsContainer.classList.contains("doors-open")) {
-      doorsContainer.classList.add("hovered");
-    }
-  });
-
-  doorsContainer.addEventListener("mouseout", () => {
-    doorsContainer.classList.remove("hovered");
-  });
+  // Show annotations immediately when content is loaded
+  showAnnotations();
 });

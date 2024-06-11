@@ -96,6 +96,11 @@ h3::selection {
     opacity: 0;
   }
 }
+@keyframes disappear {
+  to {
+    opacity: 0;
+  }
+}
 #anchorAbout,
 #anchorProjects,
 #anchorSocials {
@@ -138,14 +143,13 @@ h3::selection {
 }
 .navbar .typewriter-effect > .text {
   max-width: 0;
-  animation: typing 3s steps(var(--characters)) infinite;
+  animation: typing 3s steps(var(--characters)) 1 forwards;
   white-space: nowrap;
   overflow: hidden;
 }
 .navbar .typewriter-effect::after {
   content: " |";
-  animation: blink 1s infinite;
-  animation-timing-function: step-end;
+  animation: blink 1s step-end 1, disappear 0s linear 3s 1 forwards;
 }
 .navbar__menu {
   display: flex;

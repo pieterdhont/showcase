@@ -43,15 +43,14 @@
   
     & > .text {
       max-width: 0;
-      animation: typing 3s steps(var(--characters)) infinite;
+      animation: typing 3s steps(var(--characters)) 1 forwards ;
       white-space: nowrap;
       overflow: hidden;
     }
   
     &::after {
       content: " |";
-      animation: blink 1s infinite;
-      animation-timing-function: step-end;
+      animation: blink 1s step-end 1, disappear 0s linear 3s 1 forwards; // Add disappear animation
     }
   }
 
